@@ -1,4 +1,5 @@
 # TaskFlow – Secure Task Management API (Spring Boot + JWT)
+Looking for Erasmus+ Internship – Full-Stack Development
 
 TaskFlow is a production-grade backend service designed with modern Java technologies.  
 Built with a clean architecture and secure JWT authentication, this project demonstrates real backend development skills suitable for professional environments and internship applications 
@@ -134,6 +135,7 @@ Authorization: Bearer <token>
     "completed": false
   }
 ]
+
 
 
 
