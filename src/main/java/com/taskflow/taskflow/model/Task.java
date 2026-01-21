@@ -1,8 +1,8 @@
 package com.taskflow.taskflow.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Data
@@ -22,8 +22,9 @@ public class Task {
 
     private boolean completed = false;
 
-    // Bir kullanıcıya bağlı task
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @JsonIgnore       // JSON'a çevirirken bu alanı atla (Döngüyü kırar)
+    @ToString.Exclude // <--- YENİ EKLEME: Lombok'un yazdırırken döngüye girmesini engeller
     private User user;
 }
